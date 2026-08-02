@@ -1,0 +1,11 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+
+__pycache__/
