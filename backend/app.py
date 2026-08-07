@@ -4,6 +4,11 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Task Manager API")
 
+# This is not a good idea to solve the CORS issue.
+# allow_origins=[
+#   "http://localhost:8080",
+#  ]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],

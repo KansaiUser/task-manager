@@ -1,0 +1,24 @@
+# ---------- Build Stage ----------
+FROM node:22 AS builder
+
+WORKDIR /app
+
+# Copy only the frontend project first
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+
+# ---------- Production Stage ----------
+FROM nginx:latest
+
+# Copy the built React application
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
