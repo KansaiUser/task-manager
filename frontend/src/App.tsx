@@ -12,7 +12,7 @@ function App() {
   const [newTask, setNewTask] = useState("");
 
   async function loadTasks() {
-    const response = await fetch("http://localhost:8000/api/tasks");
+    const response = await fetch("/api/tasks");
     const data = await response.json();
     setTasks(data);
   }
@@ -24,7 +24,7 @@ function App() {
   async function addTask() {
     if (!newTask.trim()) return;
 
-    await fetch("http://localhost:8000/api/tasks", {
+    await fetch("/api/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ function App() {
   }
 
   async function deleteTask(id: number) {
-    await fetch(`http://localhost:8000/api/tasks/${id}`, {
+    await fetch(`/api/tasks/${id}`, {
       method: "DELETE",
     });
 

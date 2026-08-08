@@ -9,13 +9,14 @@ app = FastAPI(title="Task Manager API")
 #   "http://localhost:8080",
 #  ]
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# Not longer necessary to solve the CORS issue, since we are using a proxy in the frontend.
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["http://localhost:5173"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 
 class Task(BaseModel):
     id: int
