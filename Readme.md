@@ -32,9 +32,9 @@ Each chapter has a corresponding tag, and introduces another part of the archite
 
 The complete guide, including the explanations, diagrams, and step-by-step instructions, is available separately.
 
-**[Purchase the book →](YOUR_BOOK_LINK_HERE)**
+**[Buy the book on Gumroad](https://hitoruna.gumroad.com/l/react-fastapi-docker-nginx)**
 
-The book is currently planned for release through **Gumroad**. The purchase link will be updated here when it is available.
+The book is available through **Gumroad**. Click the link above for purchase
 
 ## Who Is This For?
 
